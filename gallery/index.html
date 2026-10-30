@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Adeoti Luxury Motors</title>
+  <meta name="description" content="Browse our full inventory of luxury and performance vehicles at Adeoti Luxury Motors." />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/gallery/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="page-transition">
+
+  <nav id="main-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Adeoti Luxury Motors Home">
+        <span class="brand-name">Adeoti</span>
+        <span class="brand-sub">Luxury Motors</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/gallery/" class="active" aria-current="page">Gallery</a></li>
+        <li><a href="/about/">About Us</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="/about/#contact" class="btn btn-primary">
+          <i class="fa-solid fa-envelope"></i>
+          Contact Us
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay" id="mobile-overlay" role="presentation"></div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <div class="mobile-nav-header">
+      <a href="/" class="nav-logo" aria-label="Adeoti Luxury Motors Home">
+        <span class="brand-name">Adeoti</span>
+        <span class="brand-sub">Luxury Motors</span>
+      </a>
+      <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close navigation">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="/" class="mobile-link">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+      <a href="/gallery/" class="mobile-link active">
+        <i class="fa-solid fa-car-side"></i>
+        <span>Gallery</span>
+      </a>
+      <a href="/about/" class="mobile-link">
+        <i class="fa-solid fa-circle-info"></i>
+        <span>About Us</span>
+      </a>
+    </div>
+    <div class="mobile-nav-action">
+      <a href="/about/#contact" class="btn btn-primary">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Contact Us</span>
+      </a>
+    </div>
+    <div class="mobile-nav-footer">
+      <span class="social-title">Connect With Us</span>
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="gallery-hero" aria-label="Gallery hero">
+      <div class="container">
+        <div class="gallery-hero-content">
+          <div class="section-label">Our Fleet</div>
+          <h1>
+            Explore Our <span class="gradient-text">Inventory</span>
+          </h1>
+          <p>Every vehicle is inspected, documented, and priced with full transparency.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section" aria-labelledby="gallery-heading">
+      <div class="container">
+        <div class="gallery-toolbar" role="search">
+          <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input
+              type="search"
+              id="search-input"
+              placeholder="Search by name or category…"
+              aria-label="Search cars"
+              autocomplete="off"
+              enterkeyhint="search"
+            />
+            <button type="button" class="search-clear" id="search-clear" aria-label="Clear search" hidden>
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="category-chips" id="category-chips" role="group" aria-label="Filter by category">
+            <button type="button" class="chip active" data-cat="All" aria-pressed="true">
+              <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+              <span>All</span>
+            </button>
+          </div>
+
+          <div class="price-filter">
+            <div class="price-filter-label">
+              <label for="price-slider"><i class="fa-solid fa-tag" aria-hidden="true"></i>Max Price</label>
+              <output id="price-display" for="price-slider">$97,000</output>
+            </div>
+            <input
+              type="range"
+              class="price-slider"
+              id="price-slider"
+              min="0"
+              max="100000"
+              value="100000"
+              step="1000"
+            />
+            <div class="price-scale" aria-hidden="true">
+              <span id="price-min-label">$0</span>
+              <span id="price-max-label">$100,000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-meta">
+          <div class="gallery-meta-left">
+            <p class="gallery-count" id="gallery-count">
+              Showing <strong>0</strong> vehicles
+            </p>
+            <button type="button" class="clear-filters" id="clear-filters" hidden>
+              <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
+              Clear filters
+            </button>
+          </div>
+          <div class="gallery-sort">
+            <label for="sort-select">Sort by:</label>
+            <select class="sort-select" id="sort-select" aria-label="Sort cars">
+              <option value="default">Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name-asc">Name: A–Z</option>
+              <option value="name-desc">Name: Z–A</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid" aria-live="polite" aria-label="Vehicle gallery"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal" id="modal">
+      <div class="modal-image">
+        <img src="" alt="" id="modal-img" />
+      </div>
+      <div class="modal-body">
+        <div class="modal-header">
+          <h2 class="modal-title" id="modal-title"></h2>
+          <button class="modal-close" id="modal-close" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-price" id="modal-price"></div>
+        <div class="modal-meta">
+          <div class="modal-meta-item">
+            <i class="fa-solid fa-tag" aria-hidden="true"></i>
+            <div>
+              <span>Category</span>
+              <span id="modal-type"></span>
+            </div>
+          </div>
+          <div class="modal-meta-item">
+            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+            <div>
+              <span>Condition</span>
+              <span>Pre-Owned</span>
+            </div>
+          </div>
+          <div class="modal-meta-item">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            <div>
+              <span>Inspection</span>
+              <span>Certified</span>
+            </div>
+          </div>
+          <div class="modal-meta-item">
+            <i class="fa-solid fa-file-contract" aria-hidden="true"></i>
+            <div>
+              <span>Documentation</span>
+              <span>Fully Documented</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <a href="/about/#contact" class="btn btn-primary">
+            <i class="fa-solid fa-envelope"></i>
+            Enquire Now
+          </a>
+          <a href="tel:+2348000000000" class="btn btn-gold">
+            <i class="fa-solid fa-phone"></i>
+            Call Us
+          </a>
+        </div>
+      </div>
+      <div class="modal-scroll-hint" id="modal-scroll-hint" aria-hidden="true">
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </div>
+  </div>
+
+  <footer aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-name">Adeoti</span>
+          <span class="brand-tagline">Luxury Motors</span>
+          <p>Adeoti Automobiles: sales, inspection, repairs and maintenance under one roof. Quality vehicles, honest service, zero stress.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/"><i class="fa-solid fa-chevron-right"></i>Home</a></li>
+            <li><a href="/gallery/"><i class="fa-solid fa-chevron-right"></i>Gallery</a></li>
+            <li><a href="/about/"><i class="fa-solid fa-chevron-right"></i>About Us</a></li>
+            <li><a href="/about/#contact"><i class="fa-solid fa-chevron-right"></i>Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/gallery/"><i class="fa-solid fa-chevron-right"></i>Car Sales</a></li>
+            <li><a href="/about/#contact"><i class="fa-solid fa-chevron-right"></i>Car Inspection</a></li>
+            <li><a href="/about/#contact"><i class="fa-solid fa-chevron-right"></i>Auto Repairs</a></li>
+            <li><a href="/about/#contact"><i class="fa-solid fa-chevron-right"></i>Maintenance</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <span>Address</span>
+              <span>Lagos, Nigeria</span>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <span>Phone</span>
+              <span>+234 800 000 0000</span>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <span>Email</span>
+              <span>hello@adeotimotors.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Adeoti Luxury Motors. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/gallery/script.js"></script>
+</body>
+</html>

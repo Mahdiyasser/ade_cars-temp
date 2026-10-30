@@ -1,0 +1,84 @@
+{
+  "site": {
+    "name": "Adeoti",
+    "tagline": "Adeoti Luxury Motors",
+    "subtitle": "Quality vehicles, honest service, zero stress.",
+    "footerText": "Adeoti Automobiles: sales, inspection, repairs and maintenance under one roof.",
+    "images": {
+      "hero": "Lamborghini-Huracan.JPG",
+      "about": "Race.JPG"
+    }
+  },
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Gallery", "href": "/gallery/" },
+    { "label": "About Us", "href": "/about/" }
+  ],
+  "reviews": [
+    {
+      "name": "Daniel Brooks",
+      "image": "placeholder.jpeg",
+      "text": "From browsing to purchasing, everything went smoothly. The team answered all my questions and helped me find the perfect car."
+    },
+    {
+      "name": "James Carter",
+      "image": "placeholder.jpeg",
+      "text": "Excellent service and a great selection of cars. The staff were professional and made the entire buying process easy."
+    },
+    {
+      "name": "Edgar Mitchell",
+      "image": "placeholder.jpeg",
+      "text": "I had a wonderful experience! The car was in excellent condition, and the team was helpful and transparent throughout the process."
+    },
+    {
+      "name": "Micheal Johnson",
+      "image": "placeholder.jpeg",
+      "text": "Great prices, reliable vehicles, and outstanding customer service. I would definitely recommend this company to anyone looking for a quality car."
+    }
+  ],
+  "about": {
+    "missionTitle": "Our Mission",
+    "mission": "To connect people with vehicles they love through transparency, thorough inspection and service that does not end at the handover. Every car we list is checked, documented and priced fairly.",
+    "ctaLabel": "View Inventory",
+    "ctaHref": "/gallery/",
+    "formTitle": "Do you have a message for us?",
+    "formSuccess": "Thank you! Your message has been received."
+  },
+  "services": [
+    {
+      "title": "Car Sales",
+      "text": "Explore a wide selection of quality vehicles to suit your lifestyle, preferences, and budget."
+    },
+    {
+      "title": "Car Inspection",
+      "text": "Make informed decisions with thorough vehicle inspections to assess condition, performance, and reliability."
+    },
+    {
+      "title": "Auto Repairs",
+      "text": "Get reliable solutions for mechanical issues, helping your vehicle stay safe and perform at its best."
+    },
+    {
+      "title": "Car Maintenance",
+      "text": "Keep your vehicle in excellent condition with professional servicing and routine maintenance."
+    }
+  ],
+  "categories": ["Street", "Track", "Drift", "Race"],
+  "cars": [
+    { "id": "rimac-nevera-r", "name": "Rimac Nevera R", "price": 32000, "type": "Street", "image": "rimac_nevera-r.jpeg" },
+    { "id": "chevrolet-corvette-zr1x", "name": "Chevrolet Corvette ZR1X", "price": 29000, "type": "Track", "image": "chevrolet-corvette-zr1.jpg" },
+    { "id": "lotus-evija-x", "name": "Lotus Evija X", "price": 78000, "type": "Drift", "image": "Lotus_Evija_X_.webp" },
+    { "id": "porsche-911", "name": "Porsche 911", "price": 49000, "type": "Race", "image": "Porsche911.jpg" },
+    { "id": "aston-martin-vantage", "name": "Aston Martin Vantage", "price": 45000, "type": "Street", "image": "arston_martin_vantage.jpeg" },
+    { "id": "porsche-718", "name": "Porsche 718", "price": 58000, "type": "Track", "image": "porsche718.jpeg" },
+    { "id": "bmw-m2", "name": "BMW M2", "price": 12000, "type": "Drift", "image": "BMW_M2.jpeg" },
+    { "id": "ford-mustang-gtd", "name": "Ford Mustang GTD", "price": 26000, "type": "Race", "image": "Ford_Mustang_GTD.JPG" },
+    { "id": "dodge-challenger", "name": "Dodge Challenger", "price": 61000, "type": "Street", "image": "dodge-challenger.jpeg" },
+    { "id": "mccurty-sperling", "name": "McCurty Sperling", "price": 97000, "type": "Track", "image": "mcCurty-sperling.jpeg" },
+    { "id": "dodge-hellcat", "name": "Dodge Hellcat", "price": 36000, "type": "Drift", "image": "hellcat.jpeg" },
+    { "id": "ferrari-458-speciale", "name": "Ferrari 458 Speciale", "price": 46000, "type": "Race", "image": "ferrari.jpg" },
+    { "id": "bugatti-chiron-super-sport", "name": "Bugatti Chiron Super Sport", "price": 49000, "type": "Street", "image": "rt-bugatti-chiron-super-sport-atiyeh.jpg" },
+    { "id": "koenigsegg-jesko", "name": "Koenigsegg Jesko", "price": 52000, "type": "Track", "image": "koenigsegg-jesko.jpg" },
+    { "id": "mercedes-amg", "name": "Mercedes AMG", "price": 88000, "type": "Drift", "image": "Mercedes-AMG.JPG" },
+    { "id": "mazda-mx-5", "name": "Mazda MX-5", "price": 95000, "type": "Race", "image": "mazda-mx-5.jpeg" }
+  ]
+}
